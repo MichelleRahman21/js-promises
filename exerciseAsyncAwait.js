@@ -4,7 +4,12 @@
 fetch('https://swapi.co/api/starships/9/')
   .then(response => response.json())
   .then(console.log)
-
+// RESULT
+async function fetchStarships() {
+  const response = await fetch('https://swapi.co/api/starships/9/')
+  const data = await response.json()
+  console.log(data)
+}
 
 // #2) ADVANCED: Update the function below from the video to also have
 // async await for this line: fetch(url).then(resp => resp.json())
@@ -24,6 +29,9 @@ const getData = async function() {
   console.log('posta', posts);
   console.log('albums', albums);
 }
+
+// RESPONSE
+
 
 // #3)Add a try catch block to the #2 solution in order to catch any errors. // Now, use the given array containing an invalid url, so you console.log  //your error with 'oooooops'.
 const urls = [
